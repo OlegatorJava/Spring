@@ -17,8 +17,8 @@ public class ProductServlet extends HttpServlet {
         resp.getWriter().printf("<html><body>");
         for (int i = 0; i < 10; i++) {
             Product product = new Product(i,"Name" + 1, (int) ((Math.random() * 1000) + i));
-            resp.getWriter().printf(product.toString() + "\n");
-
+            resp.getWriter().printf(product.toString());
+            resp.getWriter().printf("\n");
         }
         resp.getWriter().printf("</body></html>");
     }
